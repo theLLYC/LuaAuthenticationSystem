@@ -8,7 +8,7 @@ import "android.net.Uri"
 import "android.content.Intent"
 import "cjson"
 
-activity.ActionBar.hide()
+--activity.ActionBar.hide()
 activity.setContentView(loadlayout(layout))
 activity.setTheme(android.R.style.Theme_DeviceDefault_Light)--设置md主题
 
@@ -197,6 +197,8 @@ function addDate(date)
   return os.date("%Y-%m-%d %H:%M:%S", newDate)
 end
 
+--[[
+--这里是生成授权码的例子
 function 生成授权码(date,ownID)
   local userId=ownID:match("by.Mist(.+)")
   return "by.Mist"..minicrypto.encrypt( userId .. "_ {\""..date["type"].."\":" .. date["number"] .." }", ownID)
@@ -206,8 +208,9 @@ local tempDate={
   ["number"]=1
 }
 key.setText(生成授权码(tempDate,ownID))
+]]
 
-putData("key_validate", ownID, "0")
+
 function 检测授权信息自动登录()
   local keyValidate = getData("key_validate",ownID)
   if (keyValidate == nil or keyValidate == "0") then
@@ -254,7 +257,10 @@ function findStringInTable(str, tbl)
   end
   return false
 end
-
+--[[
+Powered by Cx330(Mist)
+任何形式的二改，转载请留名！
+]]
 单码登录.onClick=function()
   local keyText = key.text
   local LastKeyPath = "/sdcard/Android/lastKey"
