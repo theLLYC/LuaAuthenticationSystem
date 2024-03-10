@@ -14,7 +14,7 @@ activity.setTheme(android.R.style.Theme_DeviceDefault_Light)--设置md主题
 
 activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS).setStatusBarColor(0xffffffff);
 
-if tonumber(Build.VERSION.SDK) >= 23 then
+if Build.VERSION.SDK >= 23 then
   activity.getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
 end
 --导入全屏布局
