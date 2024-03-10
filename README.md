@@ -1,4 +1,4 @@
-#LuaKeyVerification
+#LuaAuthenticationSystem
 
 基于AndroLua+开发的简易本地卡密验证系统
 
