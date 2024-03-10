@@ -1,0 +1,20 @@
+--名称
+appname="自制本地卡密验证系统"
+--版本号
+appver="1.0"
+--版本
+appcode="1"
+--SDK
+appsdk="21"
+--包名
+packagename="com.Cx330"
+--调试模式
+debugmode=true
+--应用权限
+user_permission={
+  "WRITE_EXTERNAL_STORAGE",
+}
+--跳过编译
+skip_compilation={
+
+}
