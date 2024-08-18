@@ -258,7 +258,7 @@ function findStringInTable(str, tbl)
   return false
 end
 --[[
-Powered by Cx330(Mist)
+Powered by LLYC
 任何形式的二改，转载请留名！
 ]]
 单码登录.onClick=function()
